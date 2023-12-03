@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatted Content</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<strong1>Hash Function in Hive Bucketing</strong1>
+
+<p>
+. Hash functions in Hive bucketing are used to evenly distribute data across a specified number of buckets.<br>
+. This helps optimize query performance and is particularly useful for tables that are frequently joined on the bucketed column.
+</p>
+
+
+
+<strong>How Hashing Works in Hive Bucketing</strong>
+<p>
+Let's say you have a Hive table with bucketing enabled on a column named user_id.
+<br>When a new row is inserted into this table, the hash function is applied to the user_id value.
+<br>
+<br>The output of the hash function determines the bucket number for that row.
+<br><strong>For example,</strong> if the hash value falls between 0 and (number of buckets - 1), the row goes into the corresponding bucket.
+<br>
+<br>The goal is to evenly distribute data across all buckets, helping with data distribution and query performance.
+
+</p>
+
+<strong>Example in Hive:</strong>
+
+<p>
+To create a bucketed table in Hive, you use the CLUSTERED BY clause along with the INTO BUCKETS clause in the CREATE TABLE statement. <br>
+Here's a simple example:<br>
+
+<pre>
+    <code>
+      CREATE TABLE bucketed_table (
+  column1 INT,
+  column2 STRING
+)
+CLUSTERED BY (column1) INTO 4 BUCKETS;
+    </code>
+</pre>
+
+In this example, data in column1 will be hashed, and rows will be distributed into 4 buckets based on the hash value of column1.
+
+</p>
+
+<!-- Button to go back to the Hive Main page -->
+<a href="../Hive.html">Go back to Hive Main Page</a><br>
+
+
+<!-- Button to go back to the main index page -->
+<a href="../index.html">Go back to Main Page</a>
+
+
+</body>
+</html>

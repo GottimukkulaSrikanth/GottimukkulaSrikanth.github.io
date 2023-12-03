@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatted Content</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<h2>Partitioning and Bucketing</h2>
+
+<p>
+Both partitioning and bucketing are techniques used to optimize query performance by organizing and structuring data more efficiently.<br>
+    
+However, they serve different purposes and have distinct use cases.
+</p>
+
+<p>
+
+<strong1>Partitioning:</strong1><br>
+Partitioning is a way to divide data into subdirectories or partitions based on the values of one or more columns. <br>
+Each partition contains a subset of data with the same partition key values.<br>
+
+<strong>Use Cases:</strong> <br>
+&nbsp;&nbsp;&nbsp;1. Partitioning is useful for improving data pruning and reducing the amount of data that needs to be scanned during queries.<br>
+&nbsp;&nbsp;&nbsp;2.It's particularly valuable for filtering data on commonly used criteria. For example, you might partition a dataset by date, country, or category.<br>
+
+<strong>Query Performance:</strong><br>
+
+&nbsp;&nbsp;&nbsp;Partitioning can significantly enhance query performance, especially when your queries often filter data on partition columns. It allows Hive to skip reading entire partitions that are not relevant to the query, leading to faster query execution.<br>
+
+<strong>Example:</strong> PARTITIONED BY (date STRING, country STRING) would partition data by date and country.</p>
+
+
+<p>
+<strong1>Bucketing:</strong1><br>
+
+Bucketing involves dividing data files into smaller, equal-sized buckets using a hash function applied to one or more columns. This is done within each partition.<br>
+
+<strong>Use Cases:</strong> Bucketing is ideal for improving join operations, especially in scenarios where you have large datasets and need to optimize query performance for joins. <br>
+
+It reduces data skew and ensures that similar data falls into the same bucket.<br>
+
+<strong>Query Performance:</strong> Bucketing speeds up query performance, primarily when you perform equi-joins, as it allows Hive to skip over irrelevant data in each bucket when performing the join.<br>
+
+<strong>Maintenance:</strong> Bucketing requires extra care during data loading and maintenance. Data must be inserted into buckets according to the hash function, and the number of buckets should be determined with care.<br>
+
+<strong>Example:</strong> CLUSTERED BY (user_id) INTO 16 BUCKETS would create 16 buckets based on the hash of the user_id column within a partition.</p>
+
+<!-- Button to go hash function page -->
+<a href="Hash_Function.html">Hash Function</a>
+
+<!-- Button to go back to the Hive Main page -->
+<a href="../Hive.html">Go back to Hive Main Page</a><br>
+
+
+<!-- Button to go back to the main index page -->
+<a href="../index.html">Go back to Main Page</a>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatted Content</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<strong>Window Function</strong>
+<p>
+RANK() and DENSE_RANK(): Assign a value to each row within a partition based on a specified column's values. <br>
+
+<br>
+<strong>RANK() </strong> leaves gaps in case of ties, while <br>
+<strong>DENSE_RANK()</strong> Assigns the same rank to equal values.<br>
+
+<strong>ROW_NUMBER(): </strong> Assign a unique number to each row within a partition.<br>
+
+<br>
+<strong>Query :</strong><br>
+<pre>
+    <code>
+RANK() OVER (PARTITION BY Department ORDER BY SalesAmount DESC) AS Rank
+FROM Sales;
+</code>
+</pre>
+
+</p>
+
+<!-- Button to go back to the Hive Main page -->
+<a href="../Hive.html">Go back to Hive Main Page</a><br>
+
+
+<!-- Button to go back to the main index page -->
+<a href="../index.html">Go back to Main Page</a>
+
+
+</body>
+</html>
