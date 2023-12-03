@@ -1,0 +1,64 @@
+body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        /* Style for the list items */
+        ul, ol {
+            margin-top: 0; /* Remove default margin for lists */
+            padding-left: 20px; /* Add left padding to the lists */
+            line-height: 1; /* Set the line height for the lists */
+            font-family: "Times New Roman", serif; /* Set the font for the lists */
+        }
+
+        section header {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #4CAF50;
+        }
+
+        p {
+            line-height: 1.5; /* Set the line height for paragraphs */
+            margin-bottom: 10px; /* Adjust the margin-bottom as needed */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 15px;
+        }
+
+        a {
+            display: block; /* Make the links block-level elements */
+            margin-bottom: 15px; /* Add margin between the links */
+            color: #007BFF; /* Link color */
+            text-decoration: none;
+        }
+        /* Your existing styles here */
+        .tabbed-multiline-text {
+            text-indent: 20px; /* Adjust the indentation value as needed */
+        }
+        strong1 {
+            color: #008000; /* Specify your desired font color (in this case, red) */
+            font-size: 18px; /* Specify your desired font size */
+            font-weight: bold; /* Ensure bold font weight */
+            /* You can add other styles as needed */
+        }
