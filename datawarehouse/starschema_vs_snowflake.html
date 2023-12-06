@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatted Content</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<p>
+ Star schema and snowflake schema are two popular database schema designs used in data warehousing. <br>
+ They represent different approaches to organizing data in a relational database, especially when dealing with a large amount of structured data for reporting and analysis. <br>
+</p>
+
+<table border="1">
+  <tr>
+    <!-- Header row -->
+    <th>use Case</th>
+    <th>Star Schema</th>
+    <th>Snowflake Schema</th>
+  </tr>
+
+  <tr>
+      <td>Hierarchies</td>
+      <td> Hierarchies for the dimensions are stored in the dimensional table. </td>
+      <td> Hierarchies are divided into separate tables.</td>
+  </tr>
+  
+  <tr>
+        <td>Data structure</td>
+        <td>Denormalized Data structure and query also run faster.</td>
+        <td>Normalized Data Structure.</td>
+    </tr>
+
+    <tr>
+        <td>Query Performance</td>
+        <td>Usually fast because it's straightforward with single join with Fact and Dimensions.</td>
+        <td>Might be a bit slower due to more complicated connections between tables.</td>
+    </tr>
+
+    <tr>
+        <td>Ease of Use</td>
+        <td>Generally easier for business users to understand and navigate due to its simplicity.</td>
+        <td>Can be more complex for business users to understand, especially with multiple levels of normalization.</td>
+    </tr>
+</table>
+<br>
+<br>
+
+<!-- Button to go hash function page -->
+<a href="../datawarehouse.html"> Go back to datawarehouse</a>
+
+<!-- Button to go back to the main index page -->
+<a href="../index.html">Go back to Main Page</a>
+
+
+</body>
+</html>
